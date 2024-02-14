@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    image: php:apache
+    volumes:
+      - ./tu_proyecto:/var/www/html
+    ports:
+      - "9500:80"
+
+  database:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: tu_password
+      MYSQL_DATABASE: tu_base_de_datos
+      MYSQL_USER: tu_usuario
+      MYSQL_PASSWORD: tu_password
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - database
+    ports:
+      - "9501:80"
+    environment:
+      PMA_HOST: database
+      MYSQL_ROOT_PASSWORD: tu_password
