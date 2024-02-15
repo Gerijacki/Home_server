@@ -1,9 +1,9 @@
 #!/bin/bash
-
+apt install samba
 # Definir variables
-CARPETA_COMPARTIDA="/ruta/a/la/carpeta"
-USUARIO_SAMBA="usuario_samba"
-CONTRASEÑA_SAMBA="contraseña"
+CARPETA_COMPARTIDA="/shared"
+USUARIO_SAMBA="jacki"
+CONTRASENA_SAMBA="1234"
 
 # Crear la carpeta
 mkdir -p "$CARPETA_COMPARTIDA"
@@ -25,7 +25,7 @@ echo "
 " >> /etc/samba/smb.conf
 
 # Establecer la contraseña de Samba para el usuario
-echo -ne "$CONTRASEÑA_SAMBA\n$CONTRASEÑA_SAMBA\n" | smbpasswd -a -s "$USUARIO_SAMBA"
+echo -ne "$CONTRASEÑA_SAMBA\n$CONTRASENA_SAMBA\n" | smbpasswd -a -s "$USUARIO_SAMBA"
 
 # Reiniciar el servicio Samba
 systemctl restart smbd

@@ -3,7 +3,7 @@
 # Instalar Docker y herramientas relacionadas
 apt update
 apt upgrade -y
-apt install -y docker docker-compose curl cockpit samba
+apt install -y docker docker-compose curl cockpit samba jq net-tools
 systemctl restart cockpit.socket
 
 
