@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WEBHOOK_URL="https://discord.com/api/webhooks/1207088738581086270/m6Kfd88N_8jKKlaxxLO7D8hD1aHqUmnUuaxez1V2Y0la86KJJSntyS2AZrVMdUHcoDUj"
+WEBHOOK_URL=""
 LOG_FOLDER="./logs"
 mkdir -p "$LOG_FOLDER"  # -p flag ensures it doesn't throw an error if folder already exists
 LOG_FILE="$LOG_FOLDER/info.json"
