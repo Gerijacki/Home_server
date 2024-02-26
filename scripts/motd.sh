@@ -23,10 +23,6 @@ echo -e "\e[31mEspacio en Disco Disponible: $DISK\e[0m"
 echo -e "\e[31mDirección IP: $IP\e[0m"
 
 
-# Para que el script se ejecute automáticamente al iniciar sesión con cualquier usuario en Debian, 
-# puedes agregar la ruta del script al archivo /etc/profile
+#  /etc/profile
 # Agrega la ruta del script al final del archivo:
-
-# Agrega la línea al final del archivo para ejecutar tu script:
-
 # "/ruta/al/tu/script/motd.sh"
